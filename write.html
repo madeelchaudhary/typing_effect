@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Writer Using JS</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <script src="write.js" defer></script>
+</head>
+<style>
+    body {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        font-family: Poppins;
+        background: url('background.jfif');
+        overflow: hidden;
+    }
+
+    .parent {
+        background: url('background.jfif');
+        background-blend-mode: darken;
+        box-shadow: 0px 0px 8px 0px #333;
+        border-radius: 10px;
+        height: 90%;
+        width: 85%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 500ms linear;
+        animation: windowIn 900ms linear;
+
+    }
+
+    @keyframes windowIn {
+        0% {}
+
+        36% {
+            transform: scale(3.5, 3.2);
+        }
+        /* 80%{
+            transform: scale(1.5, 1.2);
+        } */
+    }
+
+    .para {
+        width: 500px;
+        height: 200px;
+        border: 2px solid lavenderblush;
+        padding: 10px 17px;
+        border-radius: 8px;
+        background-color: rgba(47, 55, 70, 0.411);
+
+    }
+
+    .show {
+        color: whitesmoke;
+        font-size: 18px;
+    }
+
+    .show::after {
+        content: " ";
+        border: 1px solid whitesmoke;
+        margin-left: 3.7px;
+        /* font-size: ; */
+        /* vertical-align: middle; */
+
+        animation-name: blink;
+        animation-duration: 0.52s;
+        animation-iteration-count: infinite;
+    }
+
+    .showed {
+        color: whitesmoke;
+        font-size: 18px;
+    }
+
+
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <p class="para">
+            <span class="showed" title="Name">Hello,</span>
+            <span class="show" style="display: inline-block;">
+            </span>
+        </p>
+    </div>
+</body>
+
+</html>
